@@ -5,7 +5,7 @@
     This is for my school account at Wake Technical Community College
     This repository will hold all of my assignments until the end of the semester  
 
-python
+python (pulled from ChatGPT, not my work)
 ```
 # Program to check if a number is even or odd
 
