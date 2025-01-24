@@ -11,7 +11,7 @@
 + Videogames are also a huge part of my life. Some of my favorites include *Red Dead Redemeption* and *Minecraft*.
 ## Websites that I recommend 
 + [Neal.Fun](www.neal.fun) - A fun website made by an indepedent developer where he posts his own projects for the world to see!
-+ [Reddit](www.reddit.com) - A website where different communities can come together to discuss and also share images. There is a subreddit for nearly every community!
++ [Reddit](http://www.reddit.com/) - A website where different communities can come together to discuss and also share images. There is a subreddit for nearly every community!
 + [Youtube](www.youtube.com) - A video sharing website that hosts thousands of hours of educational and fun videos!
 
 
