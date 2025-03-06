@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif; /* Sets the universal font family to Arial */
+    line-height: 1.6; /* Increases line height for better readability */
+    margin: 0; /* Removes default margin around the document */
+    padding: 0; /* Removes default padding around the document */
+    background: #f4f4f4; /* Sets a light grey background color for the page */
+}
+header {
+    background: #333; /* Sets a dark grey background color for the header */
+    color: #fff; /* Sets text color to white for contrast */
+    padding: 10px 20px; /* Adds padding inside the header for spacing */
+    text-align: center; /* Aligns text to the center of the header */
+}
+nav ul {
+    list-style: none; /* Removes bullet points from the navigation list */
+    padding: 0; /* Removes default padding to align navigation correctly */
+}
+nav ul li {
+    display: inline; /* Displays list items in a row instead of a column */
+    margin-right: 10px; /* Adds right margin to separate items */
+}
+nav ul li a {
+    color: #fff; /* Sets link color to white */
+    text-decoration: none; /* Removes underline from links */
+}
+main {
+    padding: 20px; /* Adds padding inside the main area for spacing */
+    background: #fff; /* Sets a white background for contrast with text */
+    margin: 20px; /* Adds margin around the main content for separation */
+    border-radius: 8px; /* Rounds the corners of the main content box */
+}
+ footer {
+        text-align: center; /* Centers the footer text horizontally */
+        padding: 10px 20px; /* Adds padding for consistency with the header */
+        background: #333; /* Sets a matching dark grey background as the header */
+        color: #fff; /* Ensures footer text is white for readability */
+        position: fixed; /* Keeps the footer at the bottom of the page */
+        bottom: 0; /* Aligns the footer at the bottom of the viewport */
+        width: 100%; /* Ensures the footer stretches across the screen */
+    }
