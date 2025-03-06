@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Form setup for local testing with HTML-only client-side validation -->
+        <!-- 
+          - The 'action="#"' attribute sets the form submission to the current page, effectively not changing the page.
+          - The 'method="post"' attribute specifies that the form data will be sent as a POST request.
+          - The 'onsubmit="return false;"' attribute prevents the form from being submitted. This is used here to demonstrate form behavior without actually sending data, allowing validation to be seen without server interaction.
+        --> 
+        <form action="#" method="post" onsubmit="return false;">
+    
+        </form>
+    <!-- Text field for name input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd"><br><br>
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+    <label for="vehicle">Choose vehicle:</label>
+    <input type="checkbox" id="car" name="vehicle" value="car">
+    <label for="car">Car</label>
+    <input type="checkbox" id="bike" name="vehicle" value="bike">
+    <label for="bike">Bike</label><br><br>
+    <input type="submit" value="Submit">
+    </body>
+    </html>
