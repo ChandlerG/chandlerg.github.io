@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="guess_simple"/>
+        <attribute name="authors" value="talon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-10 12:32:53 PM"/>
+        <attribute name="created" value="dGFsb247VEFMT04tSFBMQVBUT1A7MjAyNS0wMy0yNzswMToxNzo0MCBQTTsyODYz"/>
+        <attribute name="edited" value="dGFsb247VEFMT04tSFBMQVBUT1A7MjAyNS0wNC0xMDsxMjozMjo1MyBQTTszOzI5Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Halliday - Guess Game Simple"/>
+            <declare name="targetNumber" type="Integer" array="False" size=""/>
+            <declare name="guess" type="Integer" array="False" size=""/>
+            <assign variable="targetNumber" expression="random(15)"/>
+            <output expression="&quot;Current Target Number to Test With &quot; &amp;targetnumber" newline="True"/>
+            <output expression="&quot;Guess an number between 0 and 15. Use -999 to exit&quot;" newline="True"/>
+            <input variable="guess"/>
+            <while expression="targetNumber != guess and guess != -999">
+                <output expression="&quot;Guess Again. That was not it&quot;" newline="True"/>
+                <input variable="guess"/>
+            </while>
+            <output expression="&quot;guess is &quot;&amp;guess" newline="True"/>
+            <if expression="guess = -999">
+                <then>
+                    <output expression="&quot;You chose to exit the program&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;You guessed the correct number&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;End of program&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
