@@ -23,35 +23,37 @@ app.use(express.static(path.join(__dirname, 'public')));
 router.get('/', function(req, res){
     // It just returns a file to their browser 
     // from the same directory it's in, called gradebook.html
-    res.sendFile(path.join(__dirname, 'gradebook.html'));
+    res.sendFile(path.join(__dirname, 'Gradebook/gradebook.html'));
 });
 
 app.use("/", router);
 
 router.get('/api/grades',function(req, res){
     pool.query(
-        `SELECT Students.student_id, first_name, last_name, AVG(assignments.grade) as total_grade \
-            FROM Students  \
-            LEFT JOIN Assignments ON Assignments.student_id = Students.student_id \
-            GROUP BY Students.student_id \
-            ORDER BY total_grade DESC`,
+        `SELECT Students.student_id, Students.first_name, Students.last_name,
+            AVG(CAST(Assignments.grade AS INTEGER)) AS total_grade
+     FROM Students
+     INNER JOIN Assignments ON Assignments.student_id = Students.student_id
+     GROUP BY Students.student_id
+     ORDER BY total_grade DESC`,
         [],
-        function( err, result){
-            if(err)
-            {
-                console.error(err);
+        function(err, result) {
+            if (err) {
+                console.error('Database query error:', err.message);  // LOG THE REAL ERROR
+                res.status(500).send('Database query error');
+                return;
             }
-            
-            result.rows.forEach( 
-                    function(row){
-                        console.log(`Student Name: ${row.first_name} ${row.last_name}`);
-                        console.log(`Grade: ${row.total_grade}`);
-                    }
-            ); // End of forEach
-            
+    
+            if (!result || !result.rows) {
+                console.error('No result or rows from database');
+                res.status(500).send('No result');
+                return;
+            }
+    
             res.status(200).json(result.rows);
         }
     );
+    
 });
 
 let server = app.listen(3000, function(){
